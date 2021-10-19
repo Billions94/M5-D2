@@ -8,7 +8,7 @@ const port = 3001
 console.table(listEndpoints(server))
 
 server.use(express.json())
-server.use("/", authorsRouter)
+server.use("/authors", authorsRouter)
 
 
 server.listen(port, ()=> {

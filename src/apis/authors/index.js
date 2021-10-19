@@ -13,7 +13,7 @@ console.log(parentFolder)
 
 
 // 1. Post
-authorsRouter.post("/authors", (req, res) => {
+authorsRouter.post("/", (req, res) => {
     console.log(req.body)
 
     const newAuthor = {...req.body, createdAt: new Date(), id: uniqid()}
@@ -25,7 +25,7 @@ authorsRouter.post("/authors", (req, res) => {
 
 
 //2. Get
-authorsRouter.get("/authors", (req, res) => {
+authorsRouter.get("/", (req, res) => {
     console.log(req.body)
 
     const fileContent = fs.readFileSync(authorJSONPath)
@@ -34,11 +34,31 @@ authorsRouter.get("/authors", (req, res) => {
     const arrOfAuthors = JSON.parse(fileContent)
     res.send(arrOfAuthors)
 })
-// 3. Get
-authorsRouter.get("/")
+// 3. Get with unique ID
+authorsRouter.get("/:authorsId", (req, res) => {
+
+    const authors = JSON.parse(fs.readFileSync(authorJSONPath))
+    const author = authors.find(a => a.id === req.params.authorsId)
+    res.status(200).send(author)
+
+})
 //4. Put
-authorsRouter.put("/")
+authorsRouter.put("/:authorsId", (req, res)=> {
+
+    const authors = JSON.parse(fs.readFileSync(authorJSONPath))
+
+    const index = authors.findIndex(authors => authors.id === req.params.authorsId)
+    const updatedAuthor = { ...authors[index], ...req.body }
+    authors[index] = updatedAuthor
+    fs.writeFileSync(authorJSONPath, JSON.stringify(authors))
+    res.send(updatedAuthor)
+
+
+})
+
 //5. Delete
-authorsRouter.delete("/")
+authorsRouter.delete("/:authorsId", (req, res)=> {
+    
+})
 
 export default authorsRouter
