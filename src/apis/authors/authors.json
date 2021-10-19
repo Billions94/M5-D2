@@ -1,11 +1,1 @@
-[
-  {
-    "name": "Alexander",
-    "surname": "Egbedi",
-    "id": "pluwdqj1kuy4b9mg",
-    "email": "m@mbappe.com",
-    "dob": "05.05.1971",
-    "avatar": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1554080353-a576cf803bda%3Fixid%3DMnwxMjA3fDB8MHxzZWFyY2h8M3x8cGhvdG98ZW58MHx8MHx8%26ixlib%3Drb-1.2.1%26w%3D1000%26q%3D80&imgrefurl=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fphoto&tbnid=RTFFJeQUMSbUJM&vet=12ahUKEwjL6fiPx9bzAhUL9BoKHQEPAc0QMygBegUIARDKAQ..i&docid=AgAT_yR1X6xrJM&w=1000&h=1500&q=photo&ved=2ahUKEwjL6fiPx9bzAhUL9BoKHQEPAc0QMygBegUIARDKAQ",
-    "createdAt": "2021-10-19T13:24:06.135Z"
-  }
-]
+[{"name":"Alexander","surname":"Egbedi","id":"pluwdqj1kuy4b9mg","email":"m@mbappe.com","dob":"05.05.1971","avatar":"https://www.google.com/imgres?imgurl=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1554080353-a576cf803bda%3Fixid%3DMnwxMjA3fDB8MHxzZWFyY2h8M3x8cGhvdG98ZW58MHx8MHx8%26ixlib%3Drb-1.2.1%26w%3D1000%26q%3D80&imgrefurl=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fphoto&tbnid=RTFFJeQUMSbUJM&vet=12ahUKEwjL6fiPx9bzAhUL9BoKHQEPAc0QMygBegUIARDKAQ..i&docid=AgAT_yR1X6xrJM&w=1000&h=1500&q=photo&ved=2ahUKEwjL6fiPx9bzAhUL9BoKHQEPAc0QMygBegUIARDKAQ","createdAt":"2021-10-19T13:24:06.135Z"},{"name":"Lebron","surname":"James","id":"pluwdt3lkuy6kczz","email":"kingjames@gmail.com","dob":"15.05.1981","avatar":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fde.wikipedia.org%2Fwiki%2FLeBron_James&psig=AOvVaw292IVy1WQXWT3whXZdLsXN&ust=1634739911549000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCKCs4PDW1vMCFQAAAAAdAAAAABAD","createdAt":"2021-10-19T14:27:09.647Z"}]

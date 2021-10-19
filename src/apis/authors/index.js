@@ -21,18 +21,17 @@ authorsRouter.post("/", (req, res) => {
     authors.push(newAuthor)
     fs.writeFileSync(authorJSONPath, JSON.stringify(authors))
     res.send(201).send({ id: newAuthor.id })
+    console.log(newAuthor)
 })
+
 
 
 //2. Get
 authorsRouter.get("/", (req, res) => {
     console.log(req.body)
 
-    const fileContent = fs.readFileSync(authorJSONPath)
-    console.log(JSON.parse(fileContent))
-
-    const arrOfAuthors = JSON.parse(fileContent)
-    res.send(arrOfAuthors)
+    const authors = JSON.parse(fs.readFileSync(authorJSONPath))
+    res.send(authors)
 })
 // 3. Get with unique ID
 authorsRouter.get("/:authorsId", (req, res) => {
