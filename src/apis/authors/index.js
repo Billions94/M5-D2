@@ -47,7 +47,7 @@ authorsRouter.put("/:authorsId", (req, res)=> {
 
     const authors = JSON.parse(fs.readFileSync(authorJSONPath))
 
-    const index = authors.findIndex(authors => authors.id === req.params.authorsId)
+    const index = authors.findIndex(author => author.id === req.params.authorsId)
     const updatedAuthor = { ...authors[index], ...req.body }
     authors[index] = updatedAuthor
     fs.writeFileSync(authorJSONPath, JSON.stringify(authors))
@@ -58,7 +58,12 @@ authorsRouter.put("/:authorsId", (req, res)=> {
 
 //5. Delete
 authorsRouter.delete("/:authorsId", (req, res)=> {
-    
+
+    const authors = JSON.parse(fs.readFileSync(authorJSONPath))
+
+    const remainingAuthors = authors.filter(a => a.id !== req.params.authorsId)
+    fs.writeFileSync(authorJSONPath, JSON.stringify(remainingAuthors))
+    res.status(203).send()
 })
 
 export default authorsRouter
