@@ -20,7 +20,7 @@ authorsRouter.post("/", (req, res) => {
     const authors = JSON.parse(fs.readFileSync(authorJSONPath))
     authors.push(newAuthor)
     fs.writeFileSync(authorJSONPath, JSON.stringify(authors))
-    res.send(201).send({ id: newAuthor.id })
+    res.status(201).send({ id: newAuthor.id })
     console.log(newAuthor)
 })
 
